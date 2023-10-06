@@ -1,9 +1,9 @@
 import ExpenseForm from './ExpenseForm'
 import './NewExpense.css'
-export default function NewExpense() {
+export default function NewExpense(props) {
 	return (
 		<div className='new-expense'>
-			<ExpenseForm></ExpenseForm>
+			<ExpenseForm newExpenseHandler={props.newExpenseHandler}></ExpenseForm>
 		</div>
 	)
 }
