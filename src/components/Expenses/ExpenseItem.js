@@ -6,16 +6,18 @@ export default function ExpenseItem(expenses) {
 	const year = expenses.date.getFullYear()
 
 	return (
-		<Card className='expense-item'>
-			<div className='expense-date'>
-				<p className='expense-date__month'>{month}</p>
-				<p className='expense-date__day'>{day}</p>
-				<p className='expense-date__year'>{year}</p>
-			</div>
-			<div className='expense-item__description'>
-				<h2>{expenses.title}</h2>
-				<p className='expense-item__price'>${expenses.amount}</p>
-			</div>
-		</Card>
+		<li className='expense-list-item'>
+			<Card className='expense-item'>
+				<div className='expense-date'>
+					<p className='expense-date__month'>{month}</p>
+					<p className='expense-date__day'>{day}</p>
+					<p className='expense-date__year'>{year}</p>
+				</div>
+				<div className='expense-item__description'>
+					<h2>{expenses.title}</h2>
+					<p className='expense-item__price'>${expenses.amount}</p>
+				</div>
+			</Card>
+		</li>
 	)
 }
