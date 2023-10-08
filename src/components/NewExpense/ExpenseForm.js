@@ -20,7 +20,7 @@ export default function ExpenseForm(props) {
 		e.preventDefault()
 		const newExpense = {
 			title: enteredTitle,
-			amount: enteredAmount,
+			amount: +enteredAmount,
 			date: new Date(enteredDate),
 			id: Math.random().toString(),
 		}
